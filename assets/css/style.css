@@ -1,0 +1,21 @@
+body {
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+}
+
+img {
+	height: 100px;
+}
+
+header {
+	font-family: 'Poller One', cursive;
+	color: yellow;
+	font-size: 50px;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	color: orange;
+}
