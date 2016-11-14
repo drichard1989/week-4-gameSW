@@ -13,27 +13,56 @@
 
 $(document).ready(function() {
 
+var characters  = {
+	kenobi: {
+		health: 120,
+		attack: 8,
+		counterAttack: 20
+	},
 
-// Variables needed.
-// All of the Kenobi Variables
-var kenobiHealth = 120;
-var kenobiUserAttack = 8;
-var kenobiCounterAttack = 20;
+	skywalker: {
+		health: 100,
+		attack: 9,
+		counterAttack: 5
+	},
 
-// All of the Skywalker Variables
-var skywalkerHealth = 100;
-var skywalkerUserAttack = 9;
-var skywalkerCounterAttack = 5;
+	sidious: {
+		health: 150,
+		attack: 8,
+		counterAttack: 20
+	},
 
-// All of the Sidious Variables
-var sidiousHealth = 150;
-var sidiousUserAttack = 8;
-var sidiousCounterAttack = 20;
+	maul: {
+		health: 180,
+		attack: 8,
+		counterAttack: 25
+	}
 
-// All of the Maul Variables
-var maulHealth = 180;
-var maulUserAttack = 8
-var maulCounterAttack = 25;
+
+};
+
+
+
+// // Variables needed.
+// // All of the Kenobi Variables
+// var kenobiHealth = 120;
+// var kenobiUserAttack = 8;
+// var kenobiCounterAttack = 20;
+
+// // All of the Skywalker Variables
+// var skywalkerHealth = 100;
+// var skywalkerUserAttack = 9;
+// var skywalkerCounterAttack = 5;
+
+// // All of the Sidious Variables
+// var sidiousHealth = 150;
+// var sidiousUserAttack = 8;
+// var sidiousCounterAttack = 20;
+
+// // All of the Maul Variables
+// var maulHealth = 180;
+// var maulUserAttack = 8
+// var maulCounterAttack = 25;
 
 
 // This applies the values created above to the value of the button itself.
@@ -41,6 +70,8 @@ $("#kenobiButton").val(kenobiHealth);
 $("#maulButton").val(maulHealth);
 $("#sidiousButton").val(sidiousHealth);
 $("#skywalkerButton").val(skywalkerHealth);
+
+
 
 // This function resets the game on demand by clicking the reset button.
 function reset() {
@@ -68,17 +99,23 @@ function reset() {
 $("#yourCharacter").on("click", "button", function()
 	{
 		
- 		$('#yourCharacter button').not($(this).attr('id')).appendTo('#remainingEnemies');
+ 		$('#yourCharacter button').not(this).appendTo('#remainingEnemies');
+
+
 	});
-$("#remainingEnemies").on("click", "button", function()
-	{
-		
- 		
+$("#remainingEnemies").on("click", "button", function(){
+		if($('#defender').is(':empty')){
+			$(this).appendTo('#defender');
+		}
+
 	});
 
+$("#attack").("click", "button", function(){
+	$("#yourCharacter button")
 
 
 
+	});
 
 
 
