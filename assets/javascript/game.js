@@ -66,10 +66,10 @@ var characters  = {
 
 
 // This applies the values created above to the value of the button itself.
-$("#kenobiButton").val(kenobiHealth);
-$("#maulButton").val(maulHealth);
-$("#sidiousButton").val(sidiousHealth);
-$("#skywalkerButton").val(skywalkerHealth);
+// $("#kenobiButton").val(kenobiHealth);
+// $("#maulButton").val(maulHealth);
+// $("#sidiousButton").val(sidiousHealth);
+// $("#skywalkerButton").val(skywalkerHealth);
 
 
 
@@ -110,12 +110,12 @@ $("#remainingEnemies").on("click", "button", function(){
 
 	});
 
-$("#attack").("click", "button", function(){
-	$("#yourCharacter button")
+// $("#attack").("click", "button", function(){
+// 	$("#yourCharacter button")
 
 
 
-	});
+// 	});
 
 
 
