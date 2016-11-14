@@ -5,7 +5,11 @@
 		// - This will do a series of random calculations. 
 			// - First, calculate random health numbers for each of the 4 selectable characters.
 
-
+// The game will start by asking the user to choose a character from the your character section. 
+// Once the character has been chosen, the others will be moved to the remaining enemies section. 
+// At this point, the user will have to choose one of the remaining enemies to be a defender. Once this happens, the enemy will move to the defender row. 
+// At that point, the enemy will be attacked once the attack button is hit. If the user runs out of points, game over, game reset. If the defender runs out of points, make them dissapear. 
+// This will repeat until either the user is dead or all enemies are dead. Either you win or lose based on that. 
 
 $(document).ready(function() {
 
@@ -61,11 +65,16 @@ function reset() {
 };
 
 // This function is what we call an event listener, and runs the function when one of the buttons is clicked. 
-$(document).on("click", "button", function()
+$("#yourCharacter").on("click", "button", function()
 	{
 		
+ 		$('#yourCharacter button').not($(this).attr('id')).appendTo('#remainingEnemies');
 	});
-
+$("#remainingEnemies").on("click", "button", function()
+	{
+		
+ 		
+	});
 
 
 
